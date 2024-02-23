@@ -1,0 +1,328 @@
+:root {
+    --dark-background-color: #133B51;
+    --light-background-color: #FAFAFA;
+    --dark-foreground-color: #383838;
+    --light-foreground-color: #f9fcffde;
+    --grey-foreground-color: #7b7b7b;
+    --accent-color: #35356E;
+    --general-padding: 2em;
+    --general-margin: 1em;
+}
+
+*, :after, :before {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-foreground-color);
+    box-sizing: border-box;
+}
+
+div#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logo {
+    max-width: 79px;
+    max-height: 79px;
+}
+
+#banner {
+    background-image: url('/img/banneri.png');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 37%;
+    min-width: 300px;
+    height: 200px;
+}
+
+header {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    max-height: 30vh;
+    margin: 30px;
+}
+
+div#content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    padding-bottom: 5%; 
+    width: 75%;
+    justify-content: center;
+}
+
+.dogs img {
+    width: 100%; 
+    max-width: 300px;
+    height: auto;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+div#pictures {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    width: 80vw;
+    flex-wrap: wrap;
+    border-right: 1px solid var(--dark-foreground-color);
+}
+
+li a {
+    text-decoration: none;
+
+    color: var(--light-foreground-color);
+    border: 2px solid transparent;
+    border-radius: 9px;
+    padding: 0.3em 1em;
+    display: inline-block;
+    margin: 0 5px;
+    transition: border 0.3s ease;
+}
+
+a:hover {
+    border: solid var(--light-foreground-color);
+    border-radius: 9px;
+}
+
+nav {
+    display: inherit;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--dark-foreground-color);
+    border-bottom: 1px solid var(--dark-foreground-color);
+    margin-bottom: 2%;
+    background-color: var(--dark-background-color);
+    font-size: 1.25em;
+    padding: 0 25px;
+    height: 42px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+body {
+    font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif;
+    overflow-y: visible;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--grey-foreground-color);
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--dark-background-color);
+}
+
+button {
+    background-color: var(--dark-background-color);
+    margin-left: 160px;
+    color: var(--light-foreground-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#searchForm {
+    display: inherit;
+    flex-direction: column;
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    margin-top: 70px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.input {
+    padding: 10px;
+    margin: auto;
+    width: 400px;
+    height: 80px;
+    background: none;
+    border: 4px solid var(--dark-background-color);
+    border-radius: 50px;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: var(--dark-foreground-color);
+    transition: .5s;
+}
+
+#results {
+    margin-top: 9em;
+}
+
+img {
+    transition: all 1s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+aside {
+    position: fixed;
+    top: 390px; 
+    right: 0;
+    min-width: 17%;
+    width: 17%;
+    height: auto;
+    padding-left: 15px;
+    margin-left: auto;
+    bottom: calc(100px + 20px);
+    float: right;
+    font-style: italic;
+}
+
+#prevPage, #nextPage {
+    margin: 5px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--dark-background-color);
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    margin-top: var(--general-margin);
+}
+
+footer p {
+    color: var(--light-foreground-color);
+}
+
+footer ul {
+    list-style: none;
+}
+
+#credits {
+    display: flex;
+    flex-direction: row;
+}
+
+#pagecreated {
+    margin-top: 17px;
+}
+
+#results {
+    flex: 1;
+}
+
+#ratingsContainer {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.rating-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rating-box label {
+    cursor: pointer;
+    color: var(--grey-foreground-color);
+    transition: color 0.3s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#titleRatings {
+    flex: 1;
+    position: relative;
+    margin-right: 20%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.book-container {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+    div#content section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+    aside {
+        position: fixed;
+        top: 450px; 
+        right: 0;
+        min-width: 17%;
+        width: 17%;
+        height: auto;
+        padding-left: 15px;
+        margin-left: auto;
+        bottom: calc(100px + 20px);
+        float: right;
+        font-style: italic;
+    }
+
+    #searchForm {
+        top: 65%;
+        left: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dogs {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dogs {
+        flex-basis: 100%;
+    }
+}
